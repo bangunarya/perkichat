@@ -3,19 +3,21 @@ import requests, json
 import datetime
 
 
-
 ##------------------------Global Variables-------------------------------##
 
 URL = "https://notify-api.line.me/api/notify"
-#TODO
-token = "iis96ihAcH7wPoTZQpBymGCcz1JTIVSv75USzXWBoYB"
-#token = "DpOhVLboPeFIS4MbGoALTkyLMyjfyCkLBaK57P16dx8"
 
-#LINE_HEADERS = {'Content-Type':'application/x-www-form-urlencoded',"Authorization":"Bearer "+ token}
-LINE_HEADERS = {'Authorization': 'Bearer ' + token}
+
+def getToken(mode):
+    import yaml
+    
+    token_file = open("token.yaml", "r")
+    parsed_yaml = yaml.load(token_file, Loader=yaml.FullLoader)
+    return parsed_yaml['tokens'][mode]
 
 def send_message(token, msg, img=None):
     message = {'message': msg}
+    LINE_HEADERS = {'Authorization': 'Bearer ' + token}
     files = {'imageFile': open(img, 'rb')} if img else None
     session = requests.Session()
     resp = session.post(URL, headers=LINE_HEADERS, params=message, files=files)
@@ -35,8 +37,10 @@ def main():
     
     parser.add_argument('--img_file', help="Image File to be sent", default = None)
     parser.add_argument('message')
+    parser.add_argument('-m','--mode', dest = "mode", help="perki/test", default ="personal")
 
     args = parser.parse_args()
+    token = getToken(args.mode)
     status_code = send_message(token,args.message,args.img_file)
     print('Status Code = {}'.format(status_code))
 
