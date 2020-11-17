@@ -14,5 +14,5 @@ Supaya bisa memulai development, pertama:
 
 Kalau sudah punya semua package python yang dibutuhkan:
 
-1. ./chat_group.py MESSAGE_KAMU -m MODE -i IMAGE_FILE.png
+1. Di top workspace, ```./chat_group.py MESSAGE_KAMU -m MODE -i IMAGE_FILE.png```
  
