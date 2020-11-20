@@ -48,7 +48,7 @@ class PerkiChat:
  
         """
         
-        token_file = open("data.yaml", "r")
+        token_file = open("./YAML/data.yaml", "r")
         parsed_yaml = yaml.load(token_file, Loader=yaml.FullLoader)
         self.token = parsed_yaml['tokens'][self.mode]
 
