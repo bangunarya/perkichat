@@ -2,9 +2,9 @@
 
 import requests, json
 import datetime
-import numpy as np
+import random
  
-token = "" # isi token grup
+token = "iis96ihAcH7wPoTZQpBymGCcz1JTIVSv75USzXWBoYB" # isi token grup
 
 
 
@@ -24,8 +24,8 @@ malam = {0:'Dunia bisa mengecewakan, hari ini mungkin kita punya kekecewaan dan 
          5: 'Bagaimanapun hari ini, kita tahu bahwa dalam persekutuan dengan Tuhan jerih payah kita tidak sia-sia (1 Kor 15:58)'}
 
 
-idx_pgi = np.random.randint(len(pagi))
-idx_mlm = np.random.randint(len(malam))
+idx_pgi = random.randint(len(pagi))
+idx_mlm = random.randint(len(malam))
 
 
 
