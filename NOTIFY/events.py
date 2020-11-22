@@ -3,6 +3,7 @@ import requests
 import datetime
 import numpy as np
 import yaml
+from pathlib import Path
 from perkichat import PerkiChat as pc
 
 class Event:
@@ -30,7 +31,8 @@ class Event:
             verse_choose = 'eveningverse'
         
         ## load data
-        load_data = open("./YAML/data.yaml", "r")
+        data_fn = Path(__file__).resolve().parent.parent / 'YAML' / 'data.yaml' 
+        load_data = open(data_fn,'r')
         data_yaml = yaml.load(load_data, Loader = yaml.FullLoader)
         ayat = data_yaml[verse_choose]
     
@@ -76,10 +78,11 @@ class Event:
             Today data
 
         """
+
         month = today.month
         date = today.day
 
-        birthday_fn = './YAML/birthday.yaml'
+        birthday_fn = Path(__file__).resolve().parent.parent / 'YAML' / 'birthday.yaml'
 
         birthday_file = open(birthday_fn,'r')
 
@@ -135,7 +138,7 @@ class Event:
             for names in birthday_list:
                 birthday_msg = random.choice(birthday_greeting).format(names)
                 birthday_img = None
-                status_code = chat.send_message(birthday_msg,birthday_img)
+                status_code = self.chatter.send_message(birthday_msg,birthday_img)
                 print('Status code = {}, birthday message for today sent!'.format(status_code))
 
     
