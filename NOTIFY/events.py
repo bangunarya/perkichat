@@ -21,7 +21,7 @@ class Event:
             verse_choose = 'eveningverse'
         
         ## load data
-        load_data = open("data.yaml", "r")
+        load_data = open("./YAML/data.yaml", "r")
         data_yaml = yaml.load(load_data, Loader = yaml.FullLoader)
         ayat = data_yaml[verse_choose]
     
@@ -38,6 +38,36 @@ class Event:
         print('Status Code = {}'.format(status_code))
         
         
+    def birthday_lister(self, today):
+        """
+        brief: Returns list of people who celebrates their birthday today
+                todo: also returns corresponding pictures and ages?
+
+        Parameters
+        ----------
+        today: today
+            Today data
+
+        """
+        month = today.month
+        date = today.day
+
+        birthday_fn = './YAML/birthday.yaml'
+
+        birthday_file = open(birthday_fn,'r')
+
+        parsed_yaml = yaml.load(birthday_file, Loader = yaml.FullLoader)
+
+        birthday_str = parsed_yaml[month][date]
+
+        birthday_file.close()
+
+        birthday_list = birthday_str.split(', ')
+
+        return birthday_list
+        
+        
+
     def reminder(self):   
     
         today = self.today.weekday()
@@ -70,8 +100,27 @@ class Event:
         
         else:
             pass
-    
-    
+
+        #---------- Birthday reminder(s) -------------#
+
+        import random
+
+        birthday_greeting = [
+                'Happy birthday buat {}! Kami mendoakan semoga kamu semakin bertumbuh dan diberkati di dalam Tuhan!',
+                'Selamat ulang tahun buat teman kita tercinta {}! Tuhan memberkati dan terus bertumbuh di dalam-Nya!',
+                'Hari ini adalah hari yang spesial karena teman kita {} berulangtahun! God bless you dan terus kejarlah kemuliaan Kristus di dalam hidupmu!' 
+                ]
+
+        birthday_list = self.birthday_lister(self.today)
+
+        if birthday_list != ['']: #Ada yang berulang tahun
+            for names in birthday_list:
+                birthday_msg = random.choice(birthday_greeting).format(names)
+                birthday_img = None
+                chat = pc(self.mode)
+                status_code = chat.send_message(birthday_msg,birthday_img)
+                print('Status code = {}'.format(status_code))
+
         
     
     
