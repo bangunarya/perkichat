@@ -7,9 +7,9 @@ from perkichat import PerkiChat as pc
 
 class Event:
     
-    def __init__(self, today, mode):
+    def __init__(self, today, chatter):
         self.today = today
-        self.mode = mode
+        self.chatter = chatter
         
     def renungan(self):
         
@@ -17,6 +17,15 @@ class Event:
     
         if jam < 12:
             verse_choose = 'morningverse'
+        elif jam == 12:
+            #------------ Article From Desiring God ---------#
+
+            article_msg = 'Selamat siang guys, berikut ini ada link article dari Desiring God. Semoga menjadi berkat bagi kita semua!\n{}'.format(self.article_dg())
+            status_code = self.chatter.send_message(article_msg,None)
+            print('Desiring God article link sent with a status code of {}'.format(status_code))
+
+            # Don't send verse for noon message
+            return
         else:
             verse_choose = 'eveningverse'
         
@@ -33,11 +42,29 @@ class Event:
         img = None
     
         ## Create instance of perkichat
-        chat = pc(self.mode)
-        status_code = chat.send_message(msg,img)
+        status_code = self.chatter.send_message(msg,img)
         print('Status Code = {}'.format(status_code))
         
         
+    def article_dg(self):
+        """
+        brief: Returns featured article link from Desiring God
+
+        Parameters
+        ----------
+         - 
+        """
+
+        from bs4 import BeautifulSoup
+
+        url = 'https://www.desiringgod.org'
+        page = requests.get(url)
+        soup = BeautifulSoup(page.content, 'html.parser')
+        a = soup.find('a', attrs = {'class':'featured-resource__link'})
+        ext = a.get('href')
+
+        return url+ext
+
     def birthday_lister(self, today):
         """
         brief: Returns list of people who celebrates their birthday today
@@ -77,29 +104,20 @@ class Event:
             msg = 'Reminder: Halo teman-teman, hari ini kita ada persekutuan doa loh! Buat yang di Jülich dan Aachen ikutan yaa!'
             img = None
             ## Create instance of perkichat
-            chat = pc(self.mode)
-            status_code = chat.send_message(msg,img)
-            print('Status Code = {}'.format(status_code))
         elif today == 5:
             msg = 'Reminder: Halo-teman-teman, hari ini kita ada pendalaman alkitab/ibadah loh! Yuk join kita bersekutu bersama!'
             img = None
-            ## Create instance of perkichat
-            chat = pc(self.mode)
-            status_code = chat.send_message(msg,img)
-            print('Status Code = {}'.format(status_code))
         elif today == 6:
             FeGBerlin = 'FEG Immanuel Berlin: https://www.youtube.com/channel/UCp6z_JJITkQIs4KPsEH4p_Q'
             FeGHamburg = ' FEG Maranatha Hamburg: https://www.youtube.com/channel/UCbvRyQOQLV3InmOHt0eu3QQ'
             msg = ('Reminder: Selamat hari minggu teman-teman! Sudahkah beribadah hari ini? Beberapa link ibadah yang ada: ' +
                    FeGBerlin + FeGHamburg)   
             img = None
-            ## Create instance of perkichat
-            chat = pc(self.mode)
-            status_code = chat.send_message(msg,img)
-            print('Status Code = {}'.format(status_code))
-        
         else:
-            pass
+            #pass
+            return
+        status_code = self.chatter.send_message(msg,img)
+        print("Today's event reminder set with a status code of {}".format(status_code))
 
         #---------- Birthday reminder(s) -------------#
 
@@ -117,17 +135,16 @@ class Event:
             for names in birthday_list:
                 birthday_msg = random.choice(birthday_greeting).format(names)
                 birthday_img = None
-                chat = pc(self.mode)
                 status_code = chat.send_message(birthday_msg,birthday_img)
-                print('Status code = {}'.format(status_code))
+                print('Status code = {}, birthday message for today sent!'.format(status_code))
 
-        
-    
     
 if __name__ == '__main__':
-    mode = 'personal'
+    mode = 'ben'
     today = datetime.datetime.today()
-    ev = Event(today, mode)
+    chatter = pc(mode)
+    ev = Event(today, chatter)
+    if today.hour < 12:
+        ev.reminder()
     ev.renungan()
-    ev.reminder()
     

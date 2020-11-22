@@ -79,12 +79,3 @@ class PerkiChat:
         
     def linkarticle(self):
         raise NotImplementedError   
-    
-    def selamat_ultah(self):
-        raise NotImplementedError
-        
-        
-    
-
-
- 
