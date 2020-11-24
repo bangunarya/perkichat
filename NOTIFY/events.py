@@ -150,8 +150,4 @@ if __name__ == '__main__':
     if today.hour < 12:
         ev.reminder()
     ev.renungan()
-<<<<<<< HEAD
-    ev.reminder()
-=======
->>>>>>> 402ffd9002f8df168dce43c97272d6b09c69de44
     
