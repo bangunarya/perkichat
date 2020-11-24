@@ -47,8 +47,14 @@ class PerkiChat:
         Get the token from yaml file
  
         """
+<<<<<<< HEAD
         
         token_file = open("./YAML/data.yaml", "r")
+=======
+        from pathlib import Path
+        token_fn = Path(__file__).resolve().parent.parent / 'YAML' / 'data.yaml' 
+        token_file = open(token_fn, "r")
+>>>>>>> 402ffd9002f8df168dce43c97272d6b09c69de44
         parsed_yaml = yaml.load(token_file, Loader=yaml.FullLoader)
         self.token = parsed_yaml['tokens'][self.mode]
 
@@ -76,6 +82,7 @@ class PerkiChat:
         if files:
             files['imageFile'].close()
         self.status = resp.status_code
+<<<<<<< HEAD
         
     def linkarticle(self):
         raise NotImplementedError   
@@ -88,3 +95,5 @@ class PerkiChat:
 
 
  
+=======
+>>>>>>> 402ffd9002f8df168dce43c97272d6b09c69de44
