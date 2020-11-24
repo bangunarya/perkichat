@@ -102,11 +102,11 @@ class Event:
     
         today = self.today.weekday()
             
+        dailyReminder = True
         ## parameters
         if today == 4:
             msg = 'Reminder: Halo teman-teman, hari ini kita ada persekutuan doa loh! Buat yang di Jülich dan Aachen ikutan yaa!'
             img = None
-            ## Create instance of perkichat
         elif today == 5:
             msg = 'Reminder: Halo-teman-teman, hari ini kita ada pendalaman alkitab/ibadah loh! Yuk join kita bersekutu bersama!'
             img = None
@@ -117,11 +117,11 @@ class Event:
                    FeGBerlin + FeGHamburg)   
             img = None
         else:
-            #pass
-            return
-        status_code = self.chatter.send_message(msg,img)
-        print("Today's event reminder set with a status code of {}".format(status_code))
+            dailyReminder = False
 
+        if(dailyReminder):
+            status_code = self.chatter.send_message(msg,img)
+            print("Today's event reminder set with a status code of {}".format(status_code))
         #---------- Birthday reminder(s) -------------#
 
         import random
