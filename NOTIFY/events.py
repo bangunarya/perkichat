@@ -143,7 +143,7 @@ class Event:
 
     
 if __name__ == '__main__':
-    mode = 'ben'
+    mode = 'test'
     today = datetime.datetime.today()
     chatter = pc(mode)
     ev = Event(today, chatter)
