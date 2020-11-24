@@ -47,9 +47,14 @@ class PerkiChat:
         Get the token from yaml file
  
         """
+<<<<<<< HEAD
         from pathlib import Path
         token_fn = Path(__file__).resolve().parent.parent / 'YAML' / 'data.yaml' 
         token_file = open(token_fn, "r")
+=======
+        
+        token_file = open("./YAML/data.yaml", "r")
+>>>>>>> 7ad3a9b46e9ef95a743a443f6400cf4f4bbe120c
         parsed_yaml = yaml.load(token_file, Loader=yaml.FullLoader)
         self.token = parsed_yaml['tokens'][self.mode]
 
