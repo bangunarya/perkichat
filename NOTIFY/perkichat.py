@@ -77,6 +77,3 @@ class PerkiChat:
         if files:
             files['imageFile'].close()
         self.status = resp.status_code
-        
-    def linkarticle(self):
-        raise NotImplementedError   

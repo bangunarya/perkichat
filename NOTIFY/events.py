@@ -127,9 +127,9 @@ class Event:
         import random
 
         birthday_greeting = [
-                'Happy birthday buat {}! Kami mendoakan semoga kamu semakin bertumbuh dan diberkati di dalam Tuhan!',
-                'Selamat ulang tahun buat teman kita tercinta {}! Tuhan memberkati dan terus bertumbuh di dalam-Nya!',
-                'Hari ini adalah hari yang spesial karena teman kita {} berulangtahun! God bless you dan terus kejarlah kemuliaan Kristus di dalam hidupmu!' 
+                'Happy birthday buat {}! Kami mendoakan semoga semakin bertumbuh dan diberkati di dalam Tuhan!',
+                'Selamat ulang tahun buat saudara kita tercinta {}! Tuhan memberkati dan terus bertumbuh-lah di dalam-Nya!',
+                'Hari ini adalah hari yang spesial karena saudara kita {} berulangtahun! God bless you dan terus kejarlah kemuliaan Kristus di dalam hidupmu!' 
                 ]
 
         birthday_list = self.birthday_lister(self.today)
