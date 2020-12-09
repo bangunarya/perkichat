@@ -12,7 +12,7 @@ def main():
     parser = argparse.ArgumentParser(
             description="Send LINE Message.")
 
-    parser.add_argument('--img_file', help="Image File to be sent", default = None)
+    parser.add_argument('-i','--img_file', help="Image File to be sent", default = None)
     parser.add_argument('message')
     parser.add_argument('-m','--mode', dest = "mode", help="perki/test", default ="personal")
 

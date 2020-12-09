@@ -37,7 +37,7 @@ class Event:
         ayat = data_yaml[verse_choose]
     
         ## choose random verse
-        idx = np.random.randint(len(ayat))
+        idx = np.int(self.today.strftime("%d"))#np.random.randint(len(ayat))
  
         ## parameters
         msg = 'Renungan: ' + ayat[idx]
@@ -143,7 +143,7 @@ class Event:
 
     
 if __name__ == '__main__':
-    mode = 'test'
+    mode = 'arya'
     today = datetime.datetime.today()
     chatter = pc(mode)
     ev = Event(today, chatter)
