@@ -1,14 +1,4 @@
-#Tokens for groups
-tokens:
-        perki: xn0pKAYqDZMhmJ2p4KG5zHcjryVvF55GFaynXq6u35p
-        test: iis96ihAcH7wPoTZQpBymGCcz1JTIVSv75USzXWBoYB
-        arya: S5nrLYbdJqT9cpWC3wpx8032LHgKDZ8YIyGQr2XVgIO # test
-        ben: KUhy7jqS60h3N0wdlHpPp39ygoY3OurUc5RydfZz871
-
-
-
-
-#Verse for groups
+ #Verse for groups
 morningverse:
                 0: 'Selamat pagi teman-teman! Disela kesibukanNya Yesus selalu memiliki waktu berelasi dengan Bapa(Mark 1:35). Bagaimana dengan kita?'
                 1: 'Selamat pagi teman-teman! Jangan lupakan persekutuan dengan Tuhan, karena Ia menanti kita untuk bersekutu denganNya! (Wahyu 3:20)'
@@ -90,3 +80,38 @@ eveningverse:
 
 
 
+eveningverse2:
+                1: 'Dunia bisa mengecewakan, hari ini mungkin kita punya kekecewaan dan kegagalan. Tapi Tuhan tetap setia (2 Tim 2:13). Mari datang dan nyatakan keluh kesah kita kepadaNya!'
+                2: 'Hai manusia, telah diberitahukan kepadamu apa yang baik. Dan apakah yang dituntut TUHAN dari padamu selain berlaku adil,  mencintai kesetiaan, dan hidup dengan rendah hati di hadapan Allahmu? (Mikha 6:8)'
+                3: 'TUHAN setia dalam segala perkataan-Nya dan penuh kasih setia dalam segala perbuatan-Nya (Maz 145:13)'
+                4: 'Maz 145:14, TUHAN itu penopang bagi semua orang yang jatuh dan penegak bagi semua orang yang tertunduk.'
+                5: 'Mata sekalian orang menantikan Engkau, dan Engkaupun memberi mereka makanan pada waktunya; Engkau yang membuka tangan-Mu dan yang berkenan mengenyangkan segala yang hidup. (Maz 145:15-16)'
+                6: 'Maz 145:17 TUHAN itu adil dalam segala jalan-Nya dan penuh kasih setia dalam segala perbuatan-Nya.'
+                7: 'Maz 145:18 TUHAN dekat pada setiap orang yang berseru kepada-Nya, pada setiap orang yang berseru kepada-Nya dalam kesetiaan.'
+                8: 'Ia melakukan kehendak orang-orang yang takut akan Dia, mendengarkan teriak mereka minta tolong dan menyelamatkan mereka. TUHAN menjaga semua orang yang mengasihi-Nya, tetapi semua orang fasik akan dibinasakan-Nya. (Maz 145:19-20)'
+                9: 'Apabila orang-orang benar itu berseru-seru, maka TUHAN mendengar, dan melepaskan mereka dari segala kesesakannya. (Maz 34:18)'
+                10: 'Halo teman-teman, serahkanlah kuatirmu kepada TUHAN, maka Ia akan memelihara engkau! Tidak untuk selama-lamanya dibiarkan-Nya orang benar itu goyah. (Maz 55:23)'
+                11: 'TUHAN itu baik; Ia adalah tempat pengungsian pada waktu kesusahan; Ia mengenal orang-orang yang berlindung kepada-Nya. (Nahum 1:7)'
+                12: 'Pandanglah burung-burung di langit, yang tidak menabur dan tidak menuai dan tidak mengumpulkan bekal dalam lumbung, namun diberi makan oleh Bapamu yang di sorga Bukankah kamu jauh melebihi burung-burung itu? (Mat 6:26)'
+                13: 'Mat 6:31-32: Sebab itu janganlah kamu kuatir dan berkata: Apakah yang akan kami makan? Apakah yang akan kami minum? Apakah yang akan kami pakai? Semua itu dicari bangsa-bangsa yang tidak mengenal Allah. Akan tetapi Bapamu yang di sorga tahu, bahwa kamu memerlukan semuanya itu'
+                14: 'Mat 6:33 Tetapi carilah dahulu Kerajaan Allah dan kebenarannya, maka semuanya itu akan ditambahkan kepadamu.'
+                15: 'Sebab itu janganlah kamu kuatir akan hari besok, karena hari besok mempunyai kesusahannya sendiri. Kesusahan sehari cukuplah untuk sehari.(Mat 6:34)'
+                16: 'Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku akan memberi kelegaan kepadamu. Pikullah kuk yang Kupasang dan belajarlah pada-Ku, karena Aku lemah lembut dan rendah hati dan jiwamu akan mendapat ketenangan. (Mat 11:28-29)'
+                17: 'Maz 46-4 Allah itu bagi kita tempat perlindungan dan kekuatan, sebagai penolong dalam kesesakan sangat terbukti. Sebab itu kita tidak akan takut, sekalipun bumi berubah, sekalipun gunung-gunung goncang di dalam laut; sekalipun ribut dan berbuih airnya, sekalipun gunung-gunung goyang oleh geloranya. Sela'
+                18: 'Mikha 7:7 Tetapi aku ini akan menunggu-nunggu TUHAN, akan mengharapkan Allah yang menyelamatkan aku; Allahku akan mendengarkan aku!'
+                19: ' Maz 33:18 Sesungguhnya, mata TUHAN tertuju kepada mereka yang takut akan Dia, kepada mereka yang berharap akan kasih setia-Nya '
+                20: 'Pengharapan kita bukan dalam dunia ini, melainkan nanti dalam kekekalan bersama dengan TUHAN. Ia akan menghapus segala air mata dari mata, dan maut tidak akan ada lagi; tidak akan ada lagi perkabungan, atau ratap tangis, atau dukacita, sebab segala sesuatu yang lama itu telah berlalu. (Wahyu 21:4)'
+                21: '1 Pet 3:15 Tetapi kuduskanlah Kristus di dalam hatimu sebagai Tuhan! Dan siap sedialah pada segala waktu untuk memberi pertanggungan jawab kepada tiap-tiap orang yang meminta pertanggungan jawab dari kamu tentang pengharapan yang ada padamu, tetapi haruslah dengan lemah lembut dan hormat'
+                22: 'Yes 49:13.15 Bersorak-sorailah, hai langit, bersorak-soraklah, hai bumi, dan bergembiralah dengan sorak-sorai, hai gunung-gunung! Sebab TUHAN menghibur umat-Nya dan menyayangi orang-orang-Nya yang tertindas. Sion berkata: TUHAN telah meninggalkan aku dan Tuhanku telah melupakan aku. Dapatkah seorang perempuan melupakan bayinya, sehingga ia tidak menyayangi anak dari kandungannya? Sekalipun dia melupakannya, Aku tidak akan melupakan engkau.'
+                23: 'Maz 27:1 Dari Daud. TUHAN adalah terangku dan keselamatanku, kepada siapakah aku harus takut? TUHAN adalah benteng hidupku, terhadap siapakah aku harus gemetar?'
+                24: 'Maz 27:4 Satu hal telah kuminta kepada TUHAN, itulah yang kuingini: diam di rumah TUHAN seumur hidupku, menyaksikan kemurahan TUHAN dan menikmati bait-Nya.'
+                25: 'Roma 5:3-4 Dan bukan hanya itu saja. Kita malah bermegah juga dalam kesengsaraan kita, karena kita tahu, bahwa kesengsaraan itu menimbulkan ketekunan, dan ketekunan menimbulkan tahan uji dan tahan uji menimbulkan pengharapan.'
+                26: '(Maz 62:2-3) Hanya dekat Allah saja aku tenang, dari pada-Nyalah keselamatanku. Hanya Dialah gunung batuku dan keselamatanku, kota bentengku, aku tidak akan goyah'
+                27: '(Maz 62-8-10) Pada Allah ada keselamatanku dan kemuliaanku; gunung batu kekuatanku, tempat perlindunganku ialah Allah. Percayalah kepada-Nya setiap waktu, hai umat, curahkanlah isi hatimu di hadapan-Nya; Allah ialah tempat perlindungan kita.' 
+                28: 'Maz 148:13 Biarlah semuanya memuji-muji TUHAN, sebab hanya nama-Nya saja yang tinggi luhur, keagungan-Nya mengatasi bumi dan langit.'
+                29: 'Maz 31-22 Terpujilah TUHAN, sebab kasih setia-Nya ditunjukkan-Nya kepadaku dengan ajaib pada waktu kesesakan!'
+                30: '(Maz 31-8) Aku akan bersorak-sorak dan bersukacita karena kasih setia-Mu, sebab Engkau telah menilik sengsaraku, telah memperhatikan kesesakan jiwaku,'
+                31: '(Maz 31-23) Aku menyangka dalam kebingunganku: Aku telah terbuang dari hadapan mata-Mu. Tetapi sesungguhnya Engkau mendengarkan suara permohonanku, ketika aku berteriak kepada-Mu minta tolong.'
+                32: '(Maz 31-24-25) Kasihilah TUHAN, hai semua orang yang dikasihi-Nya! TUHAN menjaga orang-orang yang setiawan, tetapi orang-orang yang berbuat congkak diganjar-Nya dengan tidak tanggung-tanggung. Kuatkanlah dan teguhkanlah hatimu,  hai semua orang yang berharap kepada TUHAN!'
+                33: 'Janganlah orang bijaksana bermegah karena kebijaksanaannya, janganlah orang kuat bermegah karena kekuatannya, janganlah orang kaya bermegah karena kekayaannya, tetapi siapa yang mau bermegah, baiklah bermegah karena yang berikut: bahwa Ia memahami dan mengenal TUHAN, yang menunjukkan kasih setia, keadilan, dan kebenaran di bumi! (Yer 9:23) '
+               
